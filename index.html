@@ -16,18 +16,18 @@
 		<div class="player-data">
 			<p class="player-name">Player Name: fira</p>
 			<p class="player-win-count">Total Wins: </p>
-			<p class="player-score">Score</p>
+			<p class="player-score">Score: </p>
 		</div>
 		<div class="player-data">
 			<p class="player-name">Player Name: fira</p>
 			<p class="player-win-count">Total Wins: </p>
-			<p class="player-score">Score</p>
+			<p class="player-score">Score: </p>
 		</div>
 	</div>
 	<div class="game-area">
 		<div class="game-turn">
-			<p class="player name">Turn: player name </p>
-			<p class="player-key">Turn: player name </p>
+			<p class="player name">Turn: playerName </p>
+			<p class="player-key">Key: X </p>
 		</div>
 		<div class="game-board">
 			<div class="cell" id="1" onclick="marker('1')"></div>
@@ -39,10 +39,18 @@
 			<div class="cell" id="7" onclick="marker('7')"></div>
 			<div class="cell" id="8" onclick="marker('8')"></div>
 			<div class="cell" id="9" onclick="marker('9')"></div>
-	
-		</div>
+			
+			<div class="winner hide">
+				<h2 id="winner-key"></h2>
+				<p>is the</p>
+				<h2>Winner</h2>
+			</div>
+			</div>
 
-		<button class="btn">START</button>
+		<div class="btns">
+			<button class="btn with-winner">RESTART</button>
+			<button class="btn" onclick="newGame()">NEW GAME</button>
+		</div>
 	</div>
 
 	
