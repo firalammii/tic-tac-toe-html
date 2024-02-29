@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tic Tac Toe game</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+	<div class="score-board">
+		<div class="player-data">
+			<p class="player-name">Player Name: fira</p>
+			<p class="player-win-count">Total Wins: </p>
+			<p class="player-score">Score</p>
+		</div>
+		<div class="player-data">
+			<p class="player-name">Player Name: fira</p>
+			<p class="player-win-count">Total Wins: </p>
+			<p class="player-score">Score</p>
+		</div>
+	</div>
+	<div class="game-area">
+		<div class="game-turn">
+			<p class="player name">Turn: player name </p>
+			<p class="player-key">Turn: player name </p>
+		</div>
+		<div class="game-board">
+			<div class="cell" id="1" onclick="marker('1')"></div>
+			<div class="cell" id="2" onclick="marker('2')"></div>
+			<div class="cell" id="3" onclick="marker('3')"></div>
+			<div class="cell" id="4" onclick="marker('4')"></div>
+			<div class="cell" id="5" onclick="marker('5')"></div>
+			<div class="cell" id="6" onclick="marker('6')"></div>
+			<div class="cell" id="7" onclick="marker('7')"></div>
+			<div class="cell" id="8" onclick="marker('8')"></div>
+			<div class="cell" id="9" onclick="marker('9')"></div>
+	
+		</div>
+
+		<button class="btn">START</button>
+	</div>
+
+	
+	<script src="index.js"></script>
+</body>
+</html>
