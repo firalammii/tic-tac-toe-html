@@ -37,6 +37,19 @@ body {
 	margin-bottom: 1em;
 }
 
+.game-bar {
+	display: flex;
+}
+
+.game-status {
+	margin-left: auto;
+}
+
+#gamestatus,
+#turn,
+#key {
+	color: chartreuse;
+}
 .game-board {
 	background-color: rgb(41, 90, 92);
 	border-radius: 10px;
