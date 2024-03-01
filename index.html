@@ -27,8 +27,8 @@
 	<div class="game-area">
 		<div class="game-bar">
 			<div class="game-turn">
-				<p class="player name">Turn: player <span id="turn">0</span> </p>
-				<p class="player-key">Key: <span id="key">0</span> </p>
+				<p class="player name">Turn: player <span id="turn"></span> </p>
+				<p class="player-key">Key: <span id="key"></span> </p>
 			</div>
 			<p class="game-status"> Game Status: <strong id="gamestatus"></strong></p>
 		</div>
@@ -43,12 +43,12 @@
 			<div class="cell" id="8" onclick="marker('8')"></div>
 			<div class="cell" id="9" onclick="marker('9')"></div>
 			
-			<div class="winner hide">
+			<div class="celebrator hide" onclick="endCelebration()">
 				<h2 id="winner-key"></h2>
 				<p>is the</p>
 				<h2>Winner</h2>
 			</div>
-			</div>
+		</div>
 
 		<div class="btns">
 			<button class="btn with-winner" onclick="restart()">RESTART</button>

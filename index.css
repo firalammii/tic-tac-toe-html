@@ -32,7 +32,7 @@ body {
 }
 .game-turn,
 .game-board,
-.winner,
+.celebrator,
 .btn {
 	margin-bottom: 1em;
 }
@@ -110,7 +110,7 @@ body {
 	cursor: not-allowed;
 }
 
-.winner {
+.celebrator {
 	width: 100%;
 	height: 100%;
 	border-radius: 10px;
@@ -121,10 +121,10 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
+	cursor: pointer;
 }
 
 .hide {
-
 	transform: translateX(200%);
 }
 
