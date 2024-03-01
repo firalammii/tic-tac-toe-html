@@ -4,11 +4,21 @@ const cell = document.querySelector('.cell');
 const playerName = document.querySelector('.cell');
 
 
+let xWins = parseInt(document.getElementById('xwins').textContent);
+let xScore = parseInt(document.getElementById('xscore').textContent);
+let oWins = parseInt(document.getElementById('owins').textContent);
+let oScore = parseInt(document.getElementById('oscore').textContent);
+
+
+
+
 
 let currentPlayerKey = 'X';
 let moveCount = 0;
 let winner = false;
+let earlierWin = '';
 
+markCurrentPlayer();
 
 cells.forEach(cell => {
 	if (cell.textContent !== '')
@@ -26,12 +36,36 @@ function marker (id) {
 			document.querySelector('.winner').classList.toggle('hide');
 			document.getElementById('winner-key').textContent = currentPlayerKey;
 			// console.log(`player ${currentPlayerKey} ${isWon()}`);
+			currentPlayerKey == 'X' ? xWins++ : oWins++;
+			if (currentPlayerKey == 'X') {
+				if (earlierWin == 'X')
+					xScore += 10;
+				else
+					xScore += 5;
+			} else {
+				if (earlierWin == 'O')
+					oScore += 10;
+				else
+					oScore += 5;
+			}
+
+			document.getElementById('xscore').textContent = xScore;
+			document.getElementById('oscore').textContent = oScore;
+
+			document.getElementById('xwins').textContent = xWins;
+			document.getElementById('owins').textContent = oWins;
+
+			earlierWin = currentPlayerKey;
 		}
 		else {
 			currentPlayerKey = currentPlayerKey === 'X' ? 'O' : 'X';
-
 		}
+		markCurrentPlayer();
 	}
+}
+function markCurrentPlayer () {
+	document.getElementById('turn').textContent = currentPlayerKey;
+	document.getElementById('key').textContent = currentPlayerKey;
 }
 
 function newGame () {
@@ -40,6 +74,28 @@ function newGame () {
 	currentPlayerKey = 'X';
 	winner = false;
 	document.querySelector('.winner').classList.add('hide');
+
+	document.getElementById('xscore').textContent = 0;
+	document.getElementById('oscore').textContent = 0;
+
+	document.getElementById('xwins').textContent = 0;
+	document.getElementById('owins').textContent = 0;
+}
+
+function restart () {
+	// draw ?
+	cells.forEach(cell => cell.textContent = '');
+	moveCount = 0;
+
+	earlierWin = currentPlayerKey;
+	currentPlayerKey = currentPlayerKey === 'X' ? 'O' : 'X';
+	markCurrentPlayer();
+	winner = false;
+	document.querySelector('.winner').classList.add('hide');
+
+
+
+
 }
 
 function isWon () {

@@ -14,20 +14,20 @@
 <body>
 	<div class="score-board">
 		<div class="player-data">
-			<p class="player-name">Player Name: fira</p>
-			<p class="player-win-count">Total Wins: </p>
-			<p class="player-score">Score: </p>
+			<p class="player-name" id="player1">Player Name: player X</p>
+			<p class="player-win-count">Total Wins: <span id="xwins">0</span></p>
+			<p class="player-score">Score: <span id="xscore">0</span></p>
 		</div>
 		<div class="player-data">
-			<p class="player-name">Player Name: fira</p>
-			<p class="player-win-count">Total Wins: </p>
-			<p class="player-score">Score: </p>
+			<p class="player-name" id="player2">Player Name: player O</p>
+			<p class="player-win-count">Total Wins: <span id="owins">0</span></p>
+			<p class="player-score">Score: <span id="oscore">0</span></p>
 		</div>
 	</div>
 	<div class="game-area">
 		<div class="game-turn">
-			<p class="player name">Turn: playerName </p>
-			<p class="player-key">Key: X </p>
+			<p class="player name">Turn: player <span id="turn">0</span> </p>
+			<p class="player-key">Key: <span id="key">0</span> </p>
 		</div>
 		<div class="game-board">
 			<div class="cell" id="1" onclick="marker('1')"></div>
@@ -48,7 +48,7 @@
 			</div>
 
 		<div class="btns">
-			<button class="btn with-winner">RESTART</button>
+			<button class="btn with-winner" onclick="restart()">RESTART</button>
 			<button class="btn" onclick="newGame()">NEW GAME</button>
 		</div>
 	</div>

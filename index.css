@@ -6,12 +6,9 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	/* font-family: "Source Code Pro", sans-serif; */
 	font-family: "Roboto Condensed", sans-serif;
 	background-color: aquamarine;
 	
-
-	border: 1px solid red;
 }
 .score-board,
 .game-area {
@@ -19,23 +16,19 @@ body {
 }
 
 .score-board {
-	/* border: 1px solid red; */
 	width: 80%;
 	margin: auto;
 	padding: 1em 0;
 	display: flex;
 	justify-content: space-between;
-	/* background-color: #3e3c3c; */
 }
 
 .game-area {
 	margin: auto;
 	width: 80%;
-	/* height: calc(100% - 89px - 2em); */
 	padding: 2em;
 	background-color: rgb(6, 66, 67);
 	color: cyan;
-		/* position: relative; */
 }
 .game-turn,
 .game-board,
@@ -45,9 +38,6 @@ body {
 }
 
 .game-board {
-	/* border: 1px solid red; */
-	/* width: 80%; */
-	/* height: 100%; */
 	background-color: rgb(41, 90, 92);
 	border-radius: 10px;
 	padding: 1em;
@@ -114,7 +104,7 @@ body {
 	display: grid;
 	place-items: center;
 	font-size: 4rem;
-	animation: mymove 1s infinite;
+	animation: mymove 0.25s infinite;
 	position: absolute;
 	top: 0;
 	left: 0;
