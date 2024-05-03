@@ -176,7 +176,7 @@ body {
 	color: var(--clr-accent);
 	text-align: center;
 	padding: 2.5em;
-	margin-top: 2em;
+	/* margin-top: 2em; */
 }
 
 .email-cont {
